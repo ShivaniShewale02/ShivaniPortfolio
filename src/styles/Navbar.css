@@ -1,0 +1,150 @@
+/* Default Navbar Styles */
+.navbar-container {
+  background-color: #AD8B73;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(173, 139, 115, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-container-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FFFBE9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-shrink: 0;
+}
+
+.navbar-container-links {
+  display: flex; /* Default display on large screens */
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  justify-content: center; /* Center the navbar items */
+  width: 100%; /* Make sure the navbar links fill the space */
+}
+
+.navbar-container-links a {
+  color: #FFFBE9;
+  text-decoration: none;
+  margin: 0 12px;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: inline-block;
+  text-wrap: wrap;
+}
+
+.navbar-container-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0a0908;
+  transition: width 0.4s ease-in-out;
+}
+
+.navbar-container-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu for Mobile */
+.navbar-container-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar-container-hamburger .navbar-container-line {
+  width: 30px;
+  height: 4px;
+  background-color: #FFFBE9;
+  border-radius: 4px;
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  /* Initially hide navbar links on mobile */
+  .navbar-container-links {
+    display: none; /* Hide navbar links by default */
+    flex-direction: column;
+    align-items: center; /* Align items to the center on mobile */
+    width: 100%;
+    gap: 1rem;
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    left: 0;
+    background-color: #AD8B73;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(173, 139, 115, 0.3);
+    z-index: 999;
+  }
+
+  /* Show navbar links when active */
+  .navbar-container-links.navbar-container-links-active {
+    display: flex; /* Display navbar links when active */
+  }
+
+  .navbar-container-links a {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    width: 100%; /* Make the links take up the full width */
+    text-align: center; /* Center text in links on mobile */
+  }
+
+  .navbar-container-hamburger {
+    display: flex; /* Show hamburger menu */
+  }
+
+  .navbar-container-logo {
+    font-size: 1.4rem; /* Smaller logo on mobile */
+  }
+}
+
+/* For larger screens (laptops/desktops) */
+@media (min-width: 769px) {
+  .navbar-container-links {
+    display: flex; /* Ensure the navbar is displayed horizontally on larger screens */
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    justify-content: center; /* Center the navbar items */
+    margin: 0; /* Remove any extra margin */
+  }
+
+  .navbar-container {
+    padding: 1rem 4rem;
+    justify-content: space-between;
+  }
+
+  .navbar-container-hamburger {
+    display: none; /* Hide hamburger menu on larger screens */
+  }
+}

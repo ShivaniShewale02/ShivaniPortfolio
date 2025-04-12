@@ -1,0 +1,364 @@
+.skills-bubbles-section {
+  background-color: #FFFBE9; /* Set background color */
+  padding: 60px 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.skills-bubbles-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.skills-bubbles-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #AD8B73; /* Your selected color */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.skills-bubbles-title:hover {
+  color: #CEAB93; /* Slightly change color on hover */
+  transform: scale(1.1);
+}
+
+.sparkle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: sparkle 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.accordion-container {
+  margin-top: 40px;
+}
+
+.accordion-group {
+  margin-bottom: 20px;
+}
+
+.accordion-header {
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #AD8B73;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #CEAB93;
+}
+
+.accordion-content {
+  padding: 10px 20px;
+  display: none;
+  background-color: #FFF;
+  border-radius: 5px;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+.skill-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-card {
+  width: 120px;
+  height: 150px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover .skill-glow {
+  opacity: 1;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #AD8B73;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #555;
+}
+
+.skill-glow {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background-color: #AD8B73;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Accordion container */
+.accordion-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Accordion Group */
+.accordion-group {
+  background-color: #E3CAA5;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* Active Accordion Group */
+.accordion-group.active {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Accordion Header */
+.accordion-header {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: #CEAB93;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Accordion Header Hover */
+.accordion-header:hover {
+  background-color: #AD8B73;
+}
+
+.accordion-content {
+  padding: 10px 20px;
+  display: none;
+  background-color: #FFF4D9; /* Set background color of dropdown */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-content.show {
+  display: block;
+  background-color: #f6eccc; /* Add a slightly darker color when opened */
+}
+
+/* Skill Cards Container */
+.skill-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Skill Card */
+.skill-card {
+  background-color: #FFFBE9;
+  color: #AD8B73;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Skill Card Hover */
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Icon */
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Skill Name */
+.skill-name {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Skill Glow Effect */
+.skill-glow {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at center, #E3CAA5 0%, transparent 70%);
+  opacity: 0;
+  border-radius: 1rem;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Skill Glow Effect on Hover */
+.skill-card:hover .skill-glow {
+  opacity: 0.3;
+}
+
+/* -------------------- Soft Skills Section -------------------- */
+
+//* -------------------- Soft Skills Section -------------------- */
+
+/* Soft Skills Section */
+.soft-skills-section {
+  padding: 4rem 2rem;
+  background-color: #FFFBE9;
+  text-align: center;
+  margin-top: 50px; /* Consistent spacing */
+}
+
+/* Soft Skills Title */
+.soft-skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #AD8B73;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Soft Skills Container */
+.soft-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Soft Skill Card */
+.soft-skill-card {
+  background-color: #FFFBE9;
+  color: #AD8B73;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.soft-skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Soft Skill Icon */
+.soft-skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Soft Skill Name */
+.soft-skill-name {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Glow Effect */
+.soft-skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at center, #E3CAA5 0%, transparent 70%);
+  opacity: 0;
+  border-radius: 1rem;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+}
+
+.soft-skill-card:hover::before {
+  opacity: 0.3;
+}
+
+
+/* Small Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 2rem 1rem;
+  }
+
+  .skills-title, .soft-skills-title {
+    font-size: 1.6rem;
+  }
+
+  .skill-card, .soft-skill-card {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill-icon, .soft-skill-icon {
+    font-size: 1.4rem;
+  }
+
+  .skill-name, .soft-skill-name {
+    font-size: 0.85rem;
+  }
+
+  .accordion-header {
+    font-size: 0.9rem;
+  }
+}

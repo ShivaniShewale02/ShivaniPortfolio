@@ -1,0 +1,268 @@
+/* Education Section */
+.education-section {
+  background-color: #FFFBE9;
+  padding: 60px 20px;
+  color: #3b2f2f;
+}
+
+/* Education Title */
+.education-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #AD8B73;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Timeline Wrapper */
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Timeline Line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: #E3CAA5;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Timeline Item */
+.timeline {
+  position: relative;
+  z-index: 1;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Further reduced space between cards */
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  top: -10px; /* Move the dot slightly above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #AD8B73;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #AD8B73, 0 0 10px #E3CAA5;
+  z-index: 2;
+  transition: all 0.3s ease; /* Smooth transition for glow effect */
+}
+
+/* Timeline Dot Hover Effect */
+.timeline-dot:hover {
+  box-shadow: 0 0 30px #AD8B73, 0 0 25px #E3CAA5; /* Adds a noticeable glowing effect on hover */
+}
+
+/* Timeline Card */
+.timeline-card {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(173, 139, 115, 0.2);
+  transition: all 0.3s ease;
+  max-width: 500px;
+  width: 90%;
+  margin-top: 10px; /* Reduced space between dot and card */
+}
+
+/* Timeline Card Hover Effect */
+.timeline-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(173, 139, 115, 0.6), 0 0 35px rgba(227, 202, 165, 0.5);
+  /* Adds a more noticeable glow from behind the card */
+}
+
+/* Degree Text */
+.degree {
+  color: #AD8B73;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Institution Text */
+.institution {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Duration Text */
+.duration {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Details Text */
+.details {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------- Responsive Styles ---------------------- */
+
+/* Tablet Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .education-title {
+    font-size: 2.2rem;
+  }
+
+  .timeline-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .timeline-line {
+    left: 50%;
+    width: 3px; /* Slightly thinner line for tablets */
+  }
+
+  .timeline-item {
+    margin-bottom: 30px; /* Increased space between items */
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 20px; /* More space between cards */
+  }
+
+  .degree {
+    font-size: 1.3rem; /* Adjusted font size */
+  }
+
+  .institution, .duration {
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  .details {
+    font-size: 0.95rem; /* Adjusted font size */
+  }
+
+  .timeline-dot {
+    width: 15px; /* Smaller dot */
+    height: 15px;
+    top: -5px;
+  }
+}
+
+/* Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .education-title {
+    font-size: 2rem;
+  }
+
+  .timeline-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .timeline-line {
+    left: 50%;
+    width: 3px; /* Slightly thinner line for smaller screens */
+  }
+
+  .timeline-item {
+    margin-bottom: 30px; /* Increased space for better readability */
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: 20px; /* More space between cards */
+  }
+
+  .degree {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  .institution, .duration {
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  .details {
+    font-size: 0.95rem; /* Adjusted font size */
+  }
+
+  .timeline-dot {
+    width: 15px; /* Smaller dot */
+    height: 15px;
+    top: -5px; /* Adjusted for smaller screens */
+  }
+}
+
+/* Small Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .education-title {
+    font-size: 1.8rem;
+  }
+
+  .timeline-wrapper {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .timeline-line {
+    left: 50%;
+    width: 2px; /* Even thinner line for mobile */
+  }
+
+  .timeline-item {
+    margin-bottom: 40px; /* Increased space for small screens */
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px; /* More space between cards */
+  }
+
+  .degree {
+    font-size: 1.1rem; /* Adjusted font size */
+  }
+
+  .institution, .duration {
+    font-size: 0.95rem; /* Adjusted font size */
+  }
+
+  .details {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+
+  .timeline-dot {
+    width: 12px; /* Smaller dot */
+    height: 12px;
+    top: -3px; /* Adjusted for small screens */
+  }
+}
