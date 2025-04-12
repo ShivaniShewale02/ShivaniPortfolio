@@ -1,0 +1,341 @@
+.contact-section {
+  position: relative;
+  background-color: #fffbe9;
+  overflow: hidden;
+  padding: 100px 30px 120px; /* Enough space at bottom for wave */
+  z-index: 1;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h2 {
+  font-size: 2.5rem;
+  color: #ad8b73;
+  margin-bottom: 15px;
+  margin-top:10px;
+}
+
+.contact-left p {
+  font-size: 1.1rem;
+  color: #4b3f35;
+}
+/* Minimal styling for the Contact heading (Phone Number) */
+.contact-left h3 {
+  font-size: 1rem; /* Subtle and minimal font size */
+  color: #1c1815; /* Color from your palette */
+  font-weight: normal; /* Keep the font weight simple */
+  margin-top: 25px; /* Space from previous content */
+  margin-bottom: 15px; /* Space from following content */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align icon and text */
+  justify-content: flex-start; /* Align text to the left */
+}
+
+.contact-left h3 i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1rem; /* Set icon size */
+}
+
+.contact-left h3 {
+  display: inline-flex;
+  align-items: center;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 40px; /* Slightly more spacing between icons */
+  justify-content: flex-start;
+  padding-left: 30px; /* Space from the left edge */
+}
+
+.icons a {
+  font-size: 3rem; /* Slightly bigger for a bolder effect */
+  color: #ad8b73;
+  position: relative;
+  transition: all 0.4s ease;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: rgba(173, 139, 115, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  will-change: transform, box-shadow, background-color;
+  overflow: hidden;
+  transform: scale(1);
+}
+
+.icons a::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: #ceab93;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 0;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Effects */
+.icons a:hover {
+  color: #4b3f35;
+  transform: scale(1.2) rotate(20deg); /* Slight rotation with scaling */
+  box-shadow: 0 12px 40px rgba(173, 139, 115, 0.4);
+  background-color: rgba(173, 139, 115, 0.3);
+}
+
+.icons a:hover::before {
+  transform: translate(-50%, -50%) scale(1.5); /* Expanding effect behind the icon */
+}
+
+.icons a:hover i {
+  animation: iconMovement 1.2s ease-in-out infinite alternate; /* Icon movement animation */
+}
+
+@keyframes iconMovement {
+  0% {
+      transform: translateY(0) rotate(0deg);
+  }
+  50% {
+      transform: translateY(-10px) rotate(-15deg);
+  }
+  100% {
+      transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Glow Effect */
+.icons a:hover {
+  animation: glowing 1s ease-in-out infinite alternate;
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+  0% {
+      box-shadow: 0 0 15px rgba(173, 139, 115, 0.6);
+  }
+  50% {
+      box-shadow: 0 0 25px rgba(173, 139, 115, 1);
+  }
+  100% {
+      box-shadow: 0 0 15px rgba(173, 139, 115, 0.6);
+  }
+}
+
+/* Sparkle Animation */
+.icons a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: #fffbe9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: sparkle 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.icons a:hover::after {
+  opacity: 1;
+  animation: sparkle 2s ease-in-out infinite; /* Smoother sparkle effect */
+}
+
+/* Subtle Sparkle Animation */
+@keyframes sparkle {
+  0% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 1;
+  }
+  50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0.7;
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+  }
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 2px solid #ceab93;
+  background: #fff;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ad8b73;
+  outline: none;
+}
+
+.contact-form button {
+  background: #ad8b73;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #ceab93;
+}
+
+/* Wave container now properly layered behind */
+.wave-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.wave-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes waveFloat {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+.wave-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: waveFloat 6s ease-in-out infinite;
+  filter: drop-shadow(0px -4px 8px rgba(0, 0, 0, 0.1)); /* soft shadow for depth */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+      gap: 2rem;
+      justify-content: center;
+  }
+  .contact-left {
+      flex: 1;
+      min-width: 250px;
+  }
+  .contact-form {
+      flex: 1;
+      min-width: 280px;
+      max-width: 100%;
+  }
+  .contact-left h2 {
+      font-size: 2rem;
+  }
+  .contact-left p {
+      font-size: 1rem;
+  }
+  .icons {
+      gap: 20px;
+  }
+  .icons a {
+      font-size: 2.5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+      padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+  .contact-left {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  .contact-left h2 {
+      font-size: 1.8rem;
+  }
+  .contact-left p {
+      font-size: 1rem;
+  }
+  .icons {
+      justify-content: center;
+  }
+  .contact-form {
+      width: 90%;
+      padding: 25px;
+  }
+  .icons a {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+      padding: 80px 20px 100px;
+  }
+  .contact-left h2 {
+      font-size: 1.6rem;
+  }
+  .contact-left p {
+      font-size: 0.9rem;
+  }
+  .icons {
+      gap: 15px;
+  }
+  .icons a {
+      font-size: 1.8rem;
+  }
+  .contact-form {
+      padding: 20px;
+  }
+}

@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FFFBE9;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .resume-page {
+    text-align: center;
+  }
+  
+  .resume-page h1 {
+    color: #AD8B73;
+    margin-bottom: 2rem;
+  }
+  
+  .resume-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .resume-card {
+    background-color: #E3CAA5;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .resume-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .resume-card i {
+    font-size: 3rem;
+    color: #AD8B73;
+    margin-bottom: 1rem;
+  }
+  
+  .resume-card h2 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #AD8B73;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #CEAB93;
+  }
+  

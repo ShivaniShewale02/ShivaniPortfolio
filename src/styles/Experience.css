@@ -1,0 +1,161 @@
+.experience-section {
+  background-color: #FFFBE9;
+  padding: 60px 20px;
+  color: #3b2f2f;
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  color: #AD8B73;
+  margin-bottom: 50px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+/* Base Styles for Experience Card with Default Hover Effects */
+.experience-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 20px 45px rgba(173, 139, 115, 0.3); /* Default shadow */
+  overflow: hidden;
+  transform: translateY(-10px) rotate(3deg); /* Default tilt effect */
+  filter: brightness(1.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, border 0.4s ease, filter 0.4s ease;
+  background: linear-gradient(45deg, rgba(173, 139, 115, 0.1), rgba(173, 139, 115, 0.15)); /* Default glow */
+  border: 2px solid #AD8B73; /* Default border */
+}
+
+/* Stronger Enhanced Glow Effect */
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(173, 139, 115, 0.6), 0 0 60px rgba(173, 139, 115, 0.8), 0 0 100px rgba(173, 139, 115, 1); /* Stronger glowing border */
+  opacity: 0;
+  transition: opacity 0.4s ease, box-shadow 0.6s ease-in-out;
+  z-index: -1;
+}
+
+/* Hover Effects - Glowing Effect */
+.experience-card:hover {
+  transform: translateY(-12px) scale(1.05); /* Slight pop and tilt effect */
+  box-shadow: 0 25px 55px rgba(173, 139, 115, 0.35); /* Enhanced shadow */
+  filter: brightness(1.2); /* Brighten effect */
+}
+
+/* Glow becomes visible on hover */
+.experience-card:hover::before {
+  opacity: 1; /* Glow effect appears on hover */
+  box-shadow: 0 0 50px rgba(173, 139, 115, 0.8), 0 0 150px rgba(173, 139, 115, 1), 0 0 200px rgba(173, 139, 115, 1.2); /* Stronger and more intense glow */
+}
+
+.experience-content {
+  position: relative;
+  z-index: 1;
+}
+
+.role {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #AD8B73;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.role::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #AD8B73;
+  transition: width 0.3s ease;
+}
+
+/* Default Underline Effect */
+.experience-card .role::after {
+  width: 100%;
+}
+
+/* Description Slide-in with Opacity and Transform */
+.description {
+  font-size: 1.1rem;
+  color: #3b2f2f;
+  line-height: 1.6;
+  text-align: justify;
+  position: relative;
+  opacity: 1; /* Description visible by default */
+  transform: translateY(0); /* No sliding animation needed as it's static */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-card {
+    padding: 20px 30px;
+    margin-top: 20px;
+    width: 90%; /* Make it smaller on tablets */
+  }
+
+  .role {
+    font-size: 1.5rem;
+  }
+
+  .company {
+    font-size: 1.1rem;
+  }
+
+  .duration {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 1.8rem;
+  }
+
+  .experience-card {
+    padding: 15px 20px;
+    margin-top: 20px;
+    width: 90%; /* Reduce width on mobile */
+  }
+
+  .role {
+    font-size: 1.3rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .duration {
+    font-size: 0.85rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
