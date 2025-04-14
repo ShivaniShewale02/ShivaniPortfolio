@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import "./../styles/Contact.css";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 AOS.init();
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -16,8 +21,30 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.success("Message sent successfully!");
-    setForm({ name: "", email: "", subject: "", message: "" });
+
+    // Google Form action URL
+    const googleFormURL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfkc4qoxpA3rup8ZFJNDvGlED--JQK71Q6JzZquGNbDIMdm2Q/formResponse";
+
+    // Corresponding entry IDs from your Google Form
+    const formData = new FormData();
+    formData.append("entry.442347474", form.name);
+    formData.append("entry.2065834895", form.email);
+    formData.append("entry.1553928547", form.subject);
+    formData.append("entry.2043855092", form.message);
+
+    fetch(googleFormURL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    })
+      .then(() => {
+        toast.success("Message sent successfully!");
+        setForm({ name: "", email: "", subject: "", message: "" });
+      })
+      .catch(() => {
+        toast.error("Failed to send message.");
+      });
   };
 
   return (
@@ -28,22 +55,35 @@ const Contact = () => {
           <h2>Let's Connect</h2>
           <p>Got a project or idea? Let's bring it to life!</p>
           <div className="contact-details">
-  <h3>
-    <i className="fas fa-phone"></i> Contact: +918237371058
-  </h3>
-  <h3>
-    <i className="fas fa-map-marker-alt"></i> Location: Pune
-  </h3>
-</div>
+            <h3>
+              <i className="fas fa-phone"></i> Contact: +918237371058
+            </h3>
+            <h3>
+              <i className="fas fa-map-marker-alt"></i> Location: Pune
+            </h3>
+          </div>
 
           <div className="icons">
-            <a href="https://www.linkedin.com/in/shivani-shewale-674384352" target="_blank" rel="noreferrer" title="LinkedIn">
+            <a
+              href="https://www.linkedin.com/in/shivani-shewale-674384352"
+              target="_blank"
+              rel="noreferrer"
+              title="LinkedIn"
+            >
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/ShivaniShewale02" target="_blank" rel="noreferrer" title="GitHub">
+            <a
+              href="https://github.com/ShivaniShewale02"
+              target="_blank"
+              rel="noreferrer"
+              title="GitHub"
+            >
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://work.shivanishewale@gmail.com" title="Gmail">
+            <a
+              href="mailto:work.shivanishewale@gmail.com"
+              title="Gmail"
+            >
               <i className="fas fa-envelope"></i>
             </a>
           </div>
@@ -97,8 +137,26 @@ const Contact = () => {
           ></path>
         </svg>
       </div>
+
+      {/* TOAST CONTAINER */}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        style={{
+          zIndex: 99999,
+        }}
+      />
     </section>
   );
 };
 
 export default Contact;
+

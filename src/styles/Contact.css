@@ -53,6 +53,7 @@
 .contact-left h3 {
   display: inline-flex;
   align-items: center;
+  margin: 5px 0;
 }
 .contact-details {
   display: flex;
