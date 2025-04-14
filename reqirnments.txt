@@ -1,0 +1,6 @@
+https://shivanishewale02.github.io/ShivaniPortfolio/
+
+git add .
+git commit -m "Update deployment"
+git push origin main
+npm run deploy
