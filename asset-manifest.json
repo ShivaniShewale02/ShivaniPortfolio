@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ShivaniPortfolio/static/css/main.f9055d44.css",
+    "main.js": "/ShivaniPortfolio/static/js/main.e69e14f2.js",
+    "static/js/453.1407b060.chunk.js": "/ShivaniPortfolio/static/js/453.1407b060.chunk.js",
+    "static/media/amazon clone.jpeg": "/ShivaniPortfolio/static/media/amazon clone.15609e045d6f1e481b8d.jpeg",
+    "static/media/profile.jpg": "/ShivaniPortfolio/static/media/profile.f78b9fbd845a9d30cb74.jpg",
+    "static/media/expense tracker.jpeg": "/ShivaniPortfolio/static/media/expense tracker.984a1d2b2e8ef245c67c.jpeg",
+    "static/media/eventpro.jpeg": "/ShivaniPortfolio/static/media/eventpro.f345c0fce8be15ee6d78.jpeg",
+    "static/media/erp website.jpeg": "/ShivaniPortfolio/static/media/erp website.bf33bc5459e0d603e518.jpeg",
+    "index.html": "/ShivaniPortfolio/index.html",
+    "main.f9055d44.css.map": "/ShivaniPortfolio/static/css/main.f9055d44.css.map",
+    "main.e69e14f2.js.map": "/ShivaniPortfolio/static/js/main.e69e14f2.js.map",
+    "453.1407b060.chunk.js.map": "/ShivaniPortfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9055d44.css",
+    "static/js/main.e69e14f2.js"
+  ]
+}
