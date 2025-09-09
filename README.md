@@ -1,59 +1,56 @@
-# 🌐 Personal Portfolio
+# ShivaniPortfolio
 
-Welcome to my **Portfolio Repository**!  
 This repository contains the source code for my personal portfolio website where I showcase my projects, skills, and professional journey.
 
+## Features
+
+- Display of personal and professional information
+- Project showcase section
+- Skills and technologies listing
+- Responsive design for mobile and desktop devices
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- ReactJS
+- Bootstrap
+
+## Getting Started
+
+To view or modify the portfolio locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ShivaniShewale02/ShivaniPortfolio.git
+   cd ShivaniPortfolio
+   ```
+
+2. **Install dependencies:**
+   If the project uses Node.js (React), run:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm start
+   ```
+   The site will typically be available at `http://localhost:3000`.
+
+## Contributing
+
+Feel free to fork the repository or open issues for suggestions or improvements.
+
+## License
+
+This project currently does not specify a license.
+
+## Author
+
+[Shivani Shewale](https://github.com/ShivaniShewale02)
+
 ---
 
-## 🚀 Live Portfolio
-
-🔗 [Visit My Portfolio](https://shivanishewale02.github.io/ShivaniPortfolio/)
-
----
-
-## 💡 About the Portfolio
-
-This portfolio highlights:
-
-- 👩‍💻 **Who I Am** — Brief introduction and background
-- 🔧 **Skills & Technologies** — Tech stack and tools I work with
-- 🛠️ **Projects** — Real-world projects with links and descriptions
-- 📫 **Contact** — Easy ways to get in touch
-
-The portfolio is designed to be **responsive**, **modern**, and **user-friendly** with a focus on aesthetics and performance.
-
----
-
-## 🛠 Tech Stack
-
-| Frontend           | Styling           | Backend / Deployment | Tools & Other       |
-|--------------------|-------------------|----------------------|---------------------|
-| React.js           | Tailwind CSS      | Node.js (optional)    | Git & GitHub        |
-| Next.js (optional) | Sass/SCSS (optional) | Vercel / Netlify     | Figma / Canva       |
-| HTML5, CSS3        | Framer Motion     | Firebase (optional)   | Responsive Design   |
-
----
-
-## 📂 Folder Structure
-
-```plaintext
-portfolio/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   └── App.js
-└── package.json
-
----
-
-## 🚀 How to Run Locally
-
-1️⃣ **Clone the Repository:**
-```bash
-git clone https://github.com/ShivaniShewale02/portfolio.git
-cd portfolio
-
-
-
+Visit the live site or explore the source to learn more about my work!
